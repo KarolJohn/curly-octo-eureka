@@ -11,6 +11,10 @@ from passlib.context import CryptContext
 from datetime import datetime, timedelta, timezone
 from jose import JWTError, jwt
 from fastapi.security import OAuth2PasswordBearer, OAuth2PasswordRequestForm
+import os 
+from dotenv import load_dotenv
+
+load_dotenv()
 
 # Create database tables
 database.Base.metadata.create_all(bind=engine)
